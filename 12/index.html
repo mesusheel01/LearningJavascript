@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom query selector</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+        .comma{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <nav class="block">
+        <p class="para">Welcome to my web</p>
+    </nav>
+    <div class="block">
+        <h4>Hey There my name is  <span id="username">Susheel Rai</span></h4>
+        <p class="para">Here is a code for you </p>
+        <pre><code>console.log('Hey There')</code></pre>
+    </div>
+    <div>
+        <div>
+            <h3>
+                This is div 2
+            </h3>
+        </div>
+    </div>
+    <script>
+        //query selector
+        /*
+        selctors in js-
+        -class
+        -id
+        -tag
+        */
+
+        // const body = document.querySelector('body')
+        // body.innerHTML = '<h1>Hacked</>'//it will chang the whole body of website
+        // console.log(body.innerHTML)
+        // document.querySelector('div').innerHTML='<h2>hacked</h2>'--performs operatoins on first tag
+        // document.querySelector('code').innerHTML='<h1>hello</h1>'
+        // document.getElementById('username').innerText='Dom'
+
+        // innerhtml to inject html code and innertext to inject Text
+
+        // const  ele = document.querySelectorAll("div")
+
+        // ele.forEach(e=>{
+        //     console.log(e.innerHTML)
+        // })
+        
+        // const el = document.getElementById('username')
+        // el.classList.add('red-color','comma')
+        // // console.log(el.classListl.remove('red-color'))
+        // el.style.backgroundColor='blue'
+        // // el.style.color='pink'
+        // // console.log(el.parentElement)
+        // // el.parentElement.style.backgroundColor='grey'
+        // // el.setAttribute('palace',123)
+
+
+        // // //selecting via clasName
+        const elms = document.getElementsByClassName('block')
+        for(let i =0; i< elms.length; i++){
+            console.log(elms.items(i))
+        }
+    </script>
+</body>
+</html>

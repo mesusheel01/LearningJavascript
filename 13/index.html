@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom query selector</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+        .comma{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <nav class="block">
+        <p class="para">Welcome to my web</p>
+    </nav>
+    <div class="block">
+        <h4>Hey There my name is  <span id="username">Susheel Rai</span></h4>
+        <p class="para">Here is a code for you </p>
+        <pre><code>console.log('Hey There')</code></pre>
+    </div>
+    <div id="container"></div>
+    <button id="btn" >Click me</button>
+    <script>
+        // const handleClick = ()=>{
+        //     const name = document.getElementById('username')
+        //     name.style.color == 'red'? name.style.color = 'black': name.style.color='red';
+        // }
+        //  const ele = document.getElementById('unique')
+        // ele.addEventListener('click', handleClick)
+
+        // const allChild = document.querySelector('body').children
+        
+        // for(let i= 0; i < allChild.length ;i++){
+        //     allChild.item(i).addEventListener('click',()=>{
+        //         allChild.item(i).remove();
+        //     })
+        // }
+        const c = document.getElementById('container')
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', ()=>{
+            const ele = document.createElement('button')
+            ele.innerText='Susheel Rai'
+            c.appendChild(ele)
+            c.firstChild.addEventListener('click', ()=>{
+                c.firstChild.style.color='red'
+            })
+        
+        })
+                
+    </script>
+</body>
+</html>
